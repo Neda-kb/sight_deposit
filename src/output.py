@@ -2,7 +2,7 @@
 import openpyxl as pyxl
 from openpyxl.utils.dataframe import dataframe_to_rows
 from openpyxl.styles import Font
-import hcob
+import template
 
 
 def template_excel(df,outputpath,sheet_name, merge_cells=False):
@@ -18,7 +18,7 @@ def template_excel(df,outputpath,sheet_name, merge_cells=False):
             cell = sheet.cell(row=r_idx, column=c_idx, value=value)
             # Apply styles if on the header row
             if r_idx == 1:
-                cell.style = hcob.HCOB_STYLES["HL1"]
+                cell.style = template_STYLES["HL1"]
 
 
     # Freeze the first row
